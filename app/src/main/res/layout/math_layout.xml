@@ -7,10 +7,14 @@
 
 	<EditText
 		android:id="@+id/math_layout_mathNum1"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
+		android:layout_width="0dp"
+		android:layout_height="50dp"
+		android:layout_marginLeft="8dp"
+		android:layout_marginRight="8dp"
+		android:hint="Enter first number here"
 		android:inputType="number"
 		android:minEms="4"
+		android:text="0"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintLeft_toLeftOf="parent"
 		app:layout_constraintRight_toLeftOf="@id/math_layout_operators"
@@ -18,10 +22,14 @@
 
 	<EditText
 		android:id="@+id/math_layout_mathNum2"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
+		android:layout_width="0dp"
+		android:layout_height="50dp"
+		android:layout_marginLeft="8dp"
+		android:layout_marginRight="8dp"
+		android:hint="Enter second number here"
 		android:inputType="number"
 		android:minEms="4"
+		android:text="0"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintLeft_toRightOf="@id/math_layout_operators"
 		app:layout_constraintRight_toRightOf="parent"
@@ -45,7 +53,7 @@
 			android:layout_height="wrap_content"
 			android:contentDescription="Addition"
 			android:minHeight="48dp"
-			android:text="Plus" />
+			android:text="Plus (+)" />
 
 		<RadioButton
 			android:id="@+id/radioButtonMinus"
@@ -53,6 +61,6 @@
 			android:layout_height="wrap_content"
 			android:contentDescription="Subtraction"
 			android:minHeight="48dp"
-			android:text="Minus" />
+			android:text="Minus (-)" />
 	</RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

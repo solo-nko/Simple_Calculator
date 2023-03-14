@@ -12,12 +12,26 @@
 		android:id="@+id/textView"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="@string/app_name" />
+		android:text="@string/app_name"
+		android:textSize="34sp" />
 
 	<include
 		layout="@layout/math_layout"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" />
+
+	<Button
+		android:id="@+id/equalsButton"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Calculate (=)"
+		android:textSize="34sp" />
+
+	<TextView
+		android:id="@+id/main_resultText"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="" />
 
 
 </LinearLayout>
