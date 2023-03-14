@@ -18,25 +18,31 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		EditText firstNumInput = findViewById(R.id.math_layout_mathNum1);
+		//first we grab the various UI elements and store them in variables.
+		EditText firstNumInput = findViewById(R.id.math_layout_mathNum1); //first and second numbers
 		EditText secondNumInput = findViewById(R.id.math_layout_mathNum2);
-		RadioGroup operators = findViewById(R.id.math_layout_operators);
+		RadioGroup operators = findViewById(R.id.math_layout_operators); //radio button group
 		RadioButton addRadio = findViewById(R.id.radioButtonAdd);
 		RadioButton minusRadio = findViewById(R.id.radioButtonMinus);
 		RadioButton multiplyRadio = findViewById(R.id.radioButtonMultiply);
 		RadioButton divideRadio = findViewById(R.id.radioButtonDivide);
-		Button equals = findViewById(R.id.equalsButton);
-		TextView result = findViewById(R.id.main_resultText);
+		Button equals = findViewById(R.id.equalsButton); //calculate button
+		TextView result = findViewById(R.id.main_resultText); //results
+
+		//what happens when the calculate button is tapped
 		equals.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
+				/* Edit text gives us a View object, when what we need is an integer.
+				And we can't convert directly from View to int, so we go View > String > int */
 				int firstNum = Integer.parseInt(firstNumInput.getText().toString());
 				int secondNum = Integer.parseInt(secondNumInput.getText().toString());
 
+				/* The RadioGroup view comes with a built-in property that lets us see which of the buttons inside it is checked.
+				We'll use that to get the id of the selected operator button */
 				int operatorID = operators.getCheckedRadioButtonId();
 
-				Integer answer;
-
+				Integer answer; //we use the Integer object instead of int because we need to use one of the object's built-in methods (toString) later
 
 				if (operatorID == addRadio.getId()) {
 					answer = firstNum + secondNum;
