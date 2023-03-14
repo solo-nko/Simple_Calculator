@@ -7,14 +7,14 @@
 
 	<EditText
 		android:id="@+id/math_layout_mathNum1"
-		android:layout_width="0dp"
+		android:layout_width="wrap_content"
 		android:layout_height="50dp"
 		android:layout_marginLeft="8dp"
 		android:layout_marginRight="8dp"
-		android:hint="Enter first number here"
 		android:inputType="number"
-		android:minEms="4"
-		android:text="0"
+		android:minEms="3"
+		android:text="@string/math_layout_mathNum1_string"
+		android:textAlignment="center"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintLeft_toLeftOf="parent"
 		app:layout_constraintRight_toLeftOf="@id/math_layout_operators"
@@ -22,14 +22,14 @@
 
 	<EditText
 		android:id="@+id/math_layout_mathNum2"
-		android:layout_width="0dp"
+		android:layout_width="wrap_content"
 		android:layout_height="50dp"
 		android:layout_marginLeft="8dp"
 		android:layout_marginRight="8dp"
-		android:hint="Enter second number here"
 		android:inputType="number"
-		android:minEms="4"
-		android:text="0"
+		android:minEms="3"
+		android:text="@string/math_layout_mathNum2_string"
+		android:textAlignment="center"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintLeft_toRightOf="@id/math_layout_operators"
 		app:layout_constraintRight_toRightOf="parent"
@@ -38,29 +38,46 @@
 
 	<RadioGroup
 		android:id="@+id/math_layout_operators"
-		android:layout_width="0dp"
+		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:checkedButton="@id/radioButtonAdd"
+		android:gravity="fill_horizontal|center_vertical"
+		android:orientation="vertical"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintLeft_toRightOf="@id/math_layout_mathNum1"
 		app:layout_constraintRight_toLeftOf="@id/math_layout_mathNum2"
-		app:layout_constraintTop_toTopOf="parent"
-		tools:ems="5">
+		app:layout_constraintTop_toTopOf="parent">
 
 		<RadioButton
 			android:id="@+id/radioButtonAdd"
-			android:layout_width="match_parent"
+			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:layout_gravity="fill_horizontal"
 			android:contentDescription="Addition"
 			android:minHeight="48dp"
 			android:text="Plus (+)" />
 
 		<RadioButton
 			android:id="@+id/radioButtonMinus"
-			android:layout_width="match_parent"
+			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:layout_gravity="fill_horizontal"
 			android:contentDescription="Subtraction"
 			android:minHeight="48dp"
 			android:text="Minus (-)" />
+
+		<RadioButton
+			android:id="@+id/radioButtonMultiply"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="fill_horizontal"
+			android:text="Multiply (×)" />
+
+		<RadioButton
+			android:id="@+id/radioButtonDivide"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="fill_horizontal"
+			android:text="Divide (÷)" />
+
 	</RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

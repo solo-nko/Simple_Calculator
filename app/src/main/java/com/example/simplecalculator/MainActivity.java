@@ -3,6 +3,7 @@ package com.example.simplecalculator;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.GridLayout;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Button;
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
 		RadioGroup operators = findViewById(R.id.math_layout_operators);
 		RadioButton addRadio = findViewById(R.id.radioButtonAdd);
 		RadioButton minusRadio = findViewById(R.id.radioButtonMinus);
+		RadioButton multiplyRadio = findViewById(R.id.radioButtonMultiply);
+		RadioButton divideRadio = findViewById(R.id.radioButtonDivide);
 		Button equals = findViewById(R.id.equalsButton);
 		TextView result = findViewById(R.id.main_resultText);
 		equals.setOnClickListener(new View.OnClickListener() {
@@ -35,11 +38,19 @@ public class MainActivity extends AppCompatActivity {
 
 				Integer answer;
 
+
 				if (operatorID == addRadio.getId()) {
 					answer = firstNum + secondNum;
-				} else {
+				} else if (operatorID == minusRadio.getId()) {
 					answer = firstNum - secondNum;
-				} //for now there's no input validation or try/catch stuff
+				} else if (operatorID == multiplyRadio.getId()) {
+					answer = firstNum * secondNum;
+				} else if (operatorID == divideRadio.getId()) {
+					answer = firstNum / secondNum;
+				} else {
+					answer = 0;
+				}
+				//for now there's no input validation or try/catch stuff
 
 				result.setText(answer.toString());
 			}
