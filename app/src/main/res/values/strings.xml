@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Simple Calculator</string>
+	<string name="math_layout_mathNum1_string">0</string>
+	<string name="math_layout_mathNum2_string">0</string>
+	<string name="radioButtonAdd_descString">Addition</string>
+	<string name="radioButtonAdd_textString">Plus (+)</string>
+	<string name="radioButtonMinus_descString">Subtraction</string>
+	<string name="radioButtonMinus_textString">Minus (-)</string>
+	<string name="radioButtonMultiply_textString">Multiply (×)</string>
+	<string name="radioButtonDivide_textString">Divide (÷)</string>
 </resources>

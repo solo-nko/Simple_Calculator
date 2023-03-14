@@ -3,7 +3,6 @@ package com.example.simplecalculator;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.GridLayout;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Button;
@@ -19,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		TextView firstNumInput = findViewById(R.id.math_layout_mathNum1);
-		TextView secondNumInput = findViewById(R.id.math_layout_mathNum2);
+		EditText firstNumInput = findViewById(R.id.math_layout_mathNum1);
+		EditText secondNumInput = findViewById(R.id.math_layout_mathNum2);
 		RadioGroup operators = findViewById(R.id.math_layout_operators);
 		RadioButton addRadio = findViewById(R.id.radioButtonAdd);
 		RadioButton minusRadio = findViewById(R.id.radioButtonMinus);

@@ -52,32 +52,32 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_gravity="fill_horizontal"
-			android:contentDescription="Addition"
+			android:contentDescription="@string/radioButtonAdd_descString"
 			android:minHeight="48dp"
-			android:text="Plus (+)" />
+			android:text="@string/radioButtonAdd_textString" />
 
 		<RadioButton
 			android:id="@+id/radioButtonMinus"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_gravity="fill_horizontal"
-			android:contentDescription="Subtraction"
+			android:contentDescription="@string/radioButtonMinus_descString"
 			android:minHeight="48dp"
-			android:text="Minus (-)" />
+			android:text="@string/radioButtonMinus_textString" />
 
 		<RadioButton
 			android:id="@+id/radioButtonMultiply"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_gravity="fill_horizontal"
-			android:text="Multiply (×)" />
+			android:text="@string/radioButtonMultiply_textString" />
 
 		<RadioButton
 			android:id="@+id/radioButtonDivide"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_gravity="fill_horizontal"
-			android:text="Divide (÷)" />
+			android:text="@string/radioButtonDivide_textString" />
 
 	</RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>
